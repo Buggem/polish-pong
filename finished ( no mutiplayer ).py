@@ -1,4 +1,3 @@
-#### !!!! BLOCKLY EXPORT !!!! ####
 import thumbyButton as buttons
 Number = int
 import time
@@ -68,7 +67,7 @@ game_over = Sprite(1,1,bytearray([1]))
 
 game_text = Sprite(1,1,bytearray([1]))
 
-
+# game over screen
 def over():
   if 350 < time.ticks_ms() % 700:
     game_over.setFrame(1)
@@ -91,7 +90,7 @@ def over():
   display.update()
   display.fill(1)
 
-# Describe this function...
+# select menu
 def select():
   global option, jsskjddjfkjfdksj, brightness, rsg_millis__ready_set_go_, a_button, logo, rsgtime, speed, arrow, ready_set_go, game, game_text, xpos, ypos, rsgy, yplay, xspeed, yspeed
   '''if buttons.buttonU.justPressed() or buttons.buttonD.justPressed():
@@ -124,7 +123,7 @@ ready_set_go = Sprite(1,1,bytearray([1]))
 
 a_button = Sprite(1,1,bytearray([1]))
 
-# Describe this function...
+# ready set go
 def ready_set_go2():
   global option, jsskjddjfkjfdksj, brightness, rsg_millis__ready_set_go_, a_button, logo, rsgtime, speed, arrow, ready_set_go, game, game_text, xpos, ypos, rsgy, yplay, xspeed, yspeed
   rsg_millis__ready_set_go_ = time.ticks_ms()
@@ -154,7 +153,7 @@ def ready_set_go2():
   display.fill(0)
   gc.collect()
 
-# Describe this function...
+# title screen
 def title_screen():
   global option, jsskjddjfkjfdksj, brightness, rsg_millis__ready_set_go_, a_button, logo, rsgtime, speed, arrow, ready_set_go, game, game_text, xpos, ypos, rsgy, yplay, xspeed, yspeed
   if 1700 < time.ticks_ms() % 2000:
@@ -298,4 +297,3 @@ def mainLoop():
       over()
     mainLoop()
 mainLoop()
-#### !!!! BLOCKLY EXPORT !!!! ####
